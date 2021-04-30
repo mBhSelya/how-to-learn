@@ -16,6 +16,8 @@
   background-color: #f2f2f2;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
   /* выше установили ограничения для секции */
 }
 
@@ -29,12 +31,11 @@
   top: 30px;
   left: 64px;
   background-image: url(/images/logo_place_header.svg);
+  background-size: cover;
 }
 
 .header__title {
-  height: 100%;
-  width: 730px;
-  display: flex;
+  max-width: 730px;
   align-items: center;
   line-height: 96px;
   font-size: 102px;
@@ -43,7 +44,7 @@
 }
 
 .header__subtitle {
-  width: 388px;
+  max-width: 388px;
   position: absolute;
   bottom: 30px;
   left: 64px;
@@ -55,6 +56,11 @@
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
+}
+
+.header__link:hover {
+  color: #2464b8;
 }
 
 .header__main-illustration {
@@ -90,7 +96,7 @@
 }
 
 .two-columns__brief {
-  width: 175px;
+  max-width: 175px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -137,15 +143,16 @@
 }
 
 .table {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
 }
 
 .table__cell {
-  width: 250px;
+  max-width: 250px;
   margin-top: 60px;
   list-style: none;
 }
@@ -165,23 +172,23 @@
 }
 
 .feynman {
-  height: 790px;
+  min-height: 790px;
   background-color: #f2f2f2;
   background-image: url(/images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 867px 637px;
   position: relative;
+  padding-top: 100px;
 }
 
 .feynman__title {
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
-  width: 648px;
+  max-width: 648px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 100px;
 }
 
 .feynman__subtitle {
@@ -200,6 +207,11 @@
   right: 48px;
   top: 50%;
   text-decoration: none;
+  color: #2f80ed
+}
+
+.feynman__link:hover {
+  color: #2464b8;
 }
 
 .kaufman {
@@ -221,7 +233,7 @@
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
-  width: 200px;
+  max-width: 200px;
   margin-top: 80px;
 }
 
@@ -238,9 +250,12 @@
 
 .footer {
   min-height: 350px;
+  box-sizing: border-box;
   background-color: #1f1f1f;
   color: white;
   padding: 60px 0 40px;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .footer__columns {
@@ -248,7 +263,6 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  min-height: 310px;
 }
 
 .footer__column_content_copyright {
@@ -260,6 +274,7 @@
 
 .logo_place_footer {
   background-image: url(/images/logo_place_footer.svg);
+  background-size: cover;
   height: 35px;
 }
 
@@ -287,10 +302,14 @@
   font-weight: normal;
 }
 
+
 .footer__column-link {
   text-decoration: none;
   color: white;
+}
 
+.footer__column-link:hover {
+  color: rgb(126, 126, 126);
 }
 
 .footer__social-icon {

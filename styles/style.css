@@ -207,7 +207,7 @@
   right: 48px;
   top: 50%;
   text-decoration: none;
-  color: #2f80ed
+  color: #2f80ed;
 }
 
 .feynman__link:hover {
@@ -254,7 +254,6 @@
   background-color: #1f1f1f;
   color: white;
   padding: 60px 0 40px;
-  box-sizing: border-box;
   display: flex;
 }
 
